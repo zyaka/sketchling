@@ -1,0 +1,19 @@
+#container {
+    display: grid;
+    padding: 10px;
+    /* margin: auto; */
+    height: 800px;
+    width: 800px;
+    grid-template-columns: repeat(2, 120px) 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 120px) 1fr 1fr 1fr;
+}
+
+.cell-in-grid {
+    padding: 5px;
+    border: 2px solid black;
+    margin: 2px;
+}
+
+.cell-in-grid:hover {
+    background-color: aqua;
+}
