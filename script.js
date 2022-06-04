@@ -3,35 +3,28 @@ const makeCells = (number) => {
     console.log(number);
     container.innerHTML = '';
     for (let i = 0; i < number; i++) {
-        console.log("i", i);
-
         for (let j = 0; j < number; j++) {
-            console.log("j", j);
             const cell = document.createElement("div");
             cell.classList.add("cell-in-grid");
             cell.textContent = "";
             container.appendChild(cell);
         }
-        // const cell = document.createElement("div");
-        //cell.classList.add("cell-in-grid");
-        //cell.textContent = "";
-        //container.appendChild(cell);
 
     }
 }
-let gridSize = 2;
-
-makeCells(gridSize);
-
+const hoverFunction = () => {
+    const hoveredCell = document.querySelectorAll(".cell-in-grid");
+    hoveredCell.forEach(cell => {
+        cell.addEventListener("mouseover", colorCell);
+    });
+};
 const colorCell = (e) => {
     e.target.style.backgroundColor = 'purple';
 }
 
-
-const hoveredCell = document.querySelectorAll(".cell-in-grid");
-hoveredCell.forEach(cell => {
-    cell.addEventListener("mouseover", colorCell);
-});
+let gridSize = 10;
+makeCells(gridSize);
+hoverFunction();
 
 const clearGrid = () => {
     const allCells = document.querySelectorAll(".cell-in-grid");
@@ -43,10 +36,9 @@ const clearGrid = () => {
     if (setGridHeight <= 100) {
         gridSize = setGridHeight;
     }
-    // container.remove();
-    // let container = document.createElement("div");
+
     makeCells(gridSize);
-    // console.log(gridSize);
+    hoverFunction();
 
 };
 

@@ -1,11 +1,11 @@
 #container {
+    background-color: rgb(255, 255, 255);
+    grid-template-columns: repeat(13, 37.5px) 1fr 1fr 1fr;
+    grid-template-rows: repeat(13, 37.5px) 1fr 1fr 1fr;
     display: grid;
-    padding: 10px;
-    /* margin: auto; */
-    height: 800px;
-    width: 800px;
-    grid-template-columns: repeat(2, 120px) 1fr 1fr 1fr;
-    grid-template-rows: repeat(2, 120px) 1fr 1fr 1fr;
+    height: 600px;
+    width: 600px;
+    border: 1px solid rgb(156, 156, 156);
 }
 
 .cell-in-grid {
@@ -17,3 +17,12 @@
 .cell-in-grid:hover {
     background-color: aqua;
 }
+
+
+/* #wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    width: 800px;
+} */
